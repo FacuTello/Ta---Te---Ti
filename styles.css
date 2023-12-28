@@ -1,0 +1,30 @@
+.gameboard{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    width: 500px;
+    margin: auto;
+}
+
+.spot{
+    border: 5px solid black;
+    font-size: 120px;
+    text-align: center;
+}
+
+#spot3, #spot6, #spot9{
+    border-right: none;
+}
+
+#spot1, #spot4, #spot7{
+    border-left: none;
+}
+
+#spot1, #spot2, #spot3{
+    border-top: none;
+}
+
+#spot7, #spot8, #spot9{
+    border-bottom: none;
+}
+
