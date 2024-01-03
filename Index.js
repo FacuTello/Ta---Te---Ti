@@ -1,4 +1,5 @@
 'use strict';
+let gameboardArray = [];
 
  
 let playerName1 = prompt("¿Como es tu nombre?");
@@ -40,21 +41,49 @@ const player2 = {
     turn : false
 }
 
+const checkWinner = ()=>{
+    if (gameboardArray[0] == "X" && gameboardArray[1] == "X" && gameboardArray[2] == "X" ||
+        gameboardArray[3] == "X" && gameboardArray[4] == "X" && gameboardArray[5] == "X" ||
+        gameboardArray[6] == "X" && gameboardArray[7] == "X" && gameboardArray[8] == "X" ||
+        gameboardArray[0] == "X" && gameboardArray[3] == "X" && gameboardArray[6] == "X" ||
+        gameboardArray[1] == "X" && gameboardArray[4] == "X" && gameboardArray[7] == "X" ||
+        gameboardArray[2] == "X" && gameboardArray[5] == "X" && gameboardArray[8] == "X" ||
+        gameboardArray[0] == "X" && gameboardArray[4] == "X" && gameboardArray[8] == "X" ||
+        gameboardArray[2] == "X" && gameboardArray[4] == "X" && gameboardArray[6] == "X"){
+            console.log(`Gano ${player1.name}`);
+    } else if(gameboardArray[0] == "O" && gameboardArray[1] == "O" && gameboardArray[2] == "O" ||
+            gameboardArray[3] == "O" && gameboardArray[4] == "O" && gameboardArray[5] == "O" ||
+            gameboardArray[6] == "O" && gameboardArray[7] == "O" && gameboardArray[8] == "O" ||
+            gameboardArray[0] == "O" && gameboardArray[3] == "O" && gameboardArray[6] == "O" ||
+            gameboardArray[1] == "O" && gameboardArray[4] == "O" && gameboardArray[7] == "O" ||
+            gameboardArray[2] == "O" && gameboardArray[5] == "O" && gameboardArray[8] == "O" ||
+            gameboardArray[0] == "O" && gameboardArray[4] == "O" && gameboardArray[8] == "O" ||
+            gameboardArray[2] == "O" && gameboardArray[4] == "O" && gameboardArray[6] == "O"){
+            console.log(`Gano ${player2.name}`);
+    } else{
+            console.log("Es un empate");
+    }
+        
+}
+
+
 let putMark = ()=>{
-    let gameboardArray = [];
+    let gameboardArray = []
     spot1.addEventListener('mousedown', ()=>{
     if(player1.turn){
         spot1.textContent = "X";
         player1.turn = false;
         player2.turn = true;
         gameboardArray[0] = "X";
+        checkWinner();
         console.log(gameboardArray);
     } else{
         spot1.textContent = "O";
         player1.turn = true;
         player2.turn = false;
         gameboardArray[0] = "O";
-
+        checkWinner();
+        console.log(gameboardArray);
     }
     })
     spot2.addEventListener('mousedown', ()=>{
@@ -63,11 +92,15 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[1] = "X";
+            checkWinner();
+            console.log(gameboardArray);
         } else{
             spot2.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[1] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot3.addEventListener('mousedown', ()=>{
@@ -76,11 +109,15 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[2] = "X";
+            checkWinner();
+            console.log(gameboardArray);
         } else{
             spot3.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[2] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot4.addEventListener('mousedown', ()=>{
@@ -89,12 +126,15 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[3] = "X";
+            checkWinner();
+            console.log(gameboardArray);
         } else{
             spot4.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[3] = "O";
-            
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot5.addEventListener('mousedown', ()=>{
@@ -103,12 +143,15 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[4] = "X";
-            
+            checkWinner();
+            console.log(gameboardArray);
         } else{
             spot5.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[4] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot6.addEventListener('mousedown', ()=>{
@@ -117,12 +160,16 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[5] = "X";
+            checkWinner();
+            console.log(gameboardArray);
             
         } else{
             spot6.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[5] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot7.addEventListener('mousedown', ()=>{
@@ -131,12 +178,16 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[6] = "X";
+            checkWinner();
+            console.log(gameboardArray);
             
         } else{
             spot7.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[6] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot8.addEventListener('mousedown', ()=>{
@@ -145,12 +196,16 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[7] = "X";
+            checkWinner();
+            console.log(gameboardArray);
             
         } else{
             spot8.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[7] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
     spot9.addEventListener('mousedown', ()=>{
@@ -159,12 +214,15 @@ let putMark = ()=>{
             player1.turn = false;
             player2.turn = true;
             gameboardArray[8] = "X";
+            checkWinner();
             console.log(gameboardArray);
         } else{
             spot9.textContent = "O";
             player1.turn = true;
             player2.turn = false;
             gameboardArray[8] = "O";
+            checkWinner();
+            console.log(gameboardArray);
         }
     })
         
