@@ -1,14 +1,12 @@
-'use strict';
-let gameboardArray = [];
 
- 
+'use strict';
+
 let playerName1 = prompt("¿Como es tu nombre?");
 let playerName2 = prompt("¿Contra quien vas a jugar?");
 const player1Container = document.getElementById('player1-container');
 const player2Container = document.getElementById('player2-container');
 player1Container.textContent = playerName1;
 player2Container.textContent = playerName2;
-
 
 const gameboard = document.querySelector('.gameboard');
 
@@ -19,15 +17,8 @@ for (let i = 0; i < 9; i++) {
     gameboard.appendChild(spot);
 }
 
-const spot1 = document.getElementById('spot1');
-const spot2 = document.getElementById('spot2');
-const spot3 = document.getElementById('spot3');
-const spot4 = document.getElementById('spot4');
-const spot5 = document.getElementById('spot5');
-const spot6 = document.getElementById('spot6');
-const spot7 = document.getElementById('spot7');
-const spot8 = document.getElementById('spot8');
-const spot9 = document.getElementById('spot9');
+const spots = document.querySelectorAll('.spot');
+
 
 const player1 = {
     name : playerName1,
@@ -41,7 +32,45 @@ const player2 = {
     turn : false
 }
 
-const checkWinner = ()=>{
+//jugador 1 pone su ficha => funcion
+// cambio el turno => funcion
+// chequeo si hay ganador en el tablero => funcion
+//jugador 2 pone su ficha
+//cambio el turno
+// chequeo si hay ganador en el tablero
+
+const putMark = ()=>{
+    for (let i = 0; i < 9; i++) {
+        spots[i].addEventListener('mousedown', ()=> {
+            if(player1.turn){
+                spots[i].textContent = player1.mark;
+            } else{
+                spots[i].textContent = player2.mark;
+            }
+            changeTurn();
+        });
+    }
+}
+
+const changeTurn = ()=>{
+    if(player1.turn){
+        player1.turn = false;
+        player2.turn = true;
+    } else{
+        player1.turn = true;
+        player2.turn = false;
+    }
+}
+
+const game = ()=>{
+    putMark();
+    console.log(player1.turn)
+}
+
+
+game();
+
+/* const checkWinner = ()=>{
     if (gameboardArray[0] == "X" && gameboardArray[1] == "X" && gameboardArray[2] == "X" ||
         gameboardArray[3] == "X" && gameboardArray[4] == "X" && gameboardArray[5] == "X" ||
         gameboardArray[6] == "X" && gameboardArray[7] == "X" && gameboardArray[8] == "X" ||
@@ -227,7 +256,7 @@ let putMark = ()=>{
     })
         
 }
-putMark();
+putMark(); */
 
 
 
