@@ -6,6 +6,12 @@
     margin: auto;
 }
 
+.game-title{
+    text-align: center;
+    font-family: 'Tektur', sans-serif;
+    margin-bottom: 50px;
+}
+
 .spot{
     border: 5px solid black;
     font-size: 120px;
@@ -33,11 +39,13 @@
     height: 110px;
     color: black;
     font-size: 60px;
+    font-family: 'Tektur', sans-serif;
 }
 
 
 .container{
     display: flex;
     align-items: start;
+    justify-content: stretch;
 }
 
