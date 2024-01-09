@@ -2,14 +2,11 @@
 
 let gameboardCheck = [];
 let isWinner = false;
-let countTurns = 0;
 
 let playerName1 = prompt("¿Como es tu nombre?");
 let playerName2 = prompt("¿Contra quien vas a jugar?");
-const player1Container = document.getElementById('player1-container');
-const player2Container = document.getElementById('player2-container');
-player1Container.textContent = playerName1;
-player2Container.textContent = playerName2;
+
+const playerTurn = document.querySelector('.player');
 
 const gameboard = document.querySelector('.gameboard');
 
@@ -92,6 +89,7 @@ const isDraw = (countTurns, isWinner)=>{
 }
 
 const game = (countTurns)=>{
+    let countTurns = 0;
     for (let i = 0; i < 9; i++) {
         spots[i].addEventListener('click', ()=> {
             if(player1.turn){
@@ -103,6 +101,7 @@ const game = (countTurns)=>{
                 gameboardCheck[i] = player2.mark;
                 countTurns += 1;
             }
+            
             changeTurn();
             checkWinnerRows(gameboardCheck);
             checkWinnerColumns(gameboardCheck);
