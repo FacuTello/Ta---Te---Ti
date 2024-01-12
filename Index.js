@@ -43,6 +43,7 @@ const changeTurn = ()=>{
 }
 
 
+
 const checkWinnerRows = (gameboardCheck)=>{
     if (gameboardCheck[0] == "X" && gameboardCheck[1] == "X" && gameboardCheck[2] == "X" ||
         gameboardCheck[3] == "X" && gameboardCheck[4] == "X" && gameboardCheck[5] == "X" ||
@@ -104,7 +105,6 @@ const game = (countTurns)=>{
                 gameboardCheck[i] = player2.mark;
                 countTurns += 1;
             }
-            
             changeTurn();
             checkWinnerRows(gameboardCheck);
             checkWinnerColumns(gameboardCheck);
@@ -114,10 +114,8 @@ const game = (countTurns)=>{
     }
 };
 
-button.addEventListener('click', (gameboardCheck)=>{
-    for (let i = 0; i > 9; i++) {
-        spots[i].textContent = "";
-    }
-    game();
+button.addEventListener('click', ()=>{
+    location.reload();
 });
+
 game(countTurns);
