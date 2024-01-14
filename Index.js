@@ -90,7 +90,7 @@ const isDraw = (countTurns, isWinner)=>{
  }
 }
 
-const game = (countTurns)=>{
+const game = ()=>{
     playerTurn.textContent = `Comienza a jugar ${player1.name}`;
     for (let i = 0; i < 9; i++) {
         spots[i].addEventListener('click', ()=> {
@@ -118,4 +118,4 @@ button.addEventListener('click', ()=>{
     location.reload();
 });
 
-game(countTurns);
+game();
