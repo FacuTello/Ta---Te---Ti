@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Game in JavaScript
 
-![Tic-Tac-Toe Screenshot](https://ibb.co/nB4mNrj)
+![Tic-Tac-Toe Screenshot](https://i.postimg.cc/KzWJtgXj/screen.png)
 
 This is a simple Tic-Tac-Toe game implemented in JavaScript. It is part of my programming learning journey.
 
@@ -17,6 +17,10 @@ This is a simple Tic-Tac-Toe game implemented in JavaScript. It is part of my pr
 2. Enter the players' names when prompted.
 3. Click on the board spaces to make your moves.
 4. The game will display the winner or declare a draw.
+
+## Play Online
+
+You can also play the game online by visiting [Tic-Tac-Toe Online]((https://facutello.github.io/Ta---Te---Ti/)).
 
 ## Technologies Used
 
