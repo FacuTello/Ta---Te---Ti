@@ -11,7 +11,7 @@ body{
 
 .title-container{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: chartreuse;
     justify-content: center;
@@ -78,5 +78,12 @@ body{
     .player{
         font-size: 30px;
     }
+
+    .gameboard{
+        display: grid;
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px 110px;
+        margin: auto;
 }
 
+}

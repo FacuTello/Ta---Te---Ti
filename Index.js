@@ -3,7 +3,7 @@
 let gameboardCheck = [];
 let isWinner = false;
 let countTurns = 0;
-let playerName1 = prompt("¿Como es tu nombre?");
+let playerName1 = prompt("Vamos a jugar al TA-TE-TI ¿Como es tu nombre?");
 let playerName2 = prompt("¿Contra quien vas a jugar?");
 
 const playerTurn = document.querySelector('.player');
