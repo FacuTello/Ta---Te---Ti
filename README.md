@@ -20,7 +20,7 @@ This is a simple Tic-Tac-Toe game implemented in JavaScript. It is part of my pr
 
 ## Play Online
 
-You can also play the game online by visiting [Tic-Tac-Toe Online]((https://facutello.github.io/Ta---Te---Ti/)).
+You can also play the game online by visiting (https://facutello.github.io/Ta---Te---Ti/).
 
 ## Technologies Used
 
