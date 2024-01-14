@@ -28,10 +28,4 @@ This is a simple Tic-Tac-Toe game implemented in JavaScript. It is part of my pr
 
 Contributions are welcome! If you find any issues or have improvements, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
 Enjoy playing this simple Tic-Tac-Toe game! If you have any questions or suggestions, feel free to contact me.
