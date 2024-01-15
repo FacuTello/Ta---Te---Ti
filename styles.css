@@ -10,6 +10,7 @@ body,html{
     grid-template-columns: 130px 130px 130px;
     grid-template-rows: 130px 130px 130px;
     margin: auto;
+    
 }
 
 .title-container{
@@ -85,8 +86,9 @@ body,html{
     .gameboard{
         display: grid;
         grid-template-columns: 110px 110px 110px;
-        grid-template-rows: 110px 110px 110px;
+        grid-template-rows: 115px 115px 115px;
         margin: auto;
+        font-size: 10px;
 }
     .title-container{
     display: flex;
@@ -94,6 +96,11 @@ body,html{
     height: 60px;
     background-color: chartreuse;
     justify-content: center;
-    
+}
+.game-title{
+    display: inline;
+    font-family: 'Tektur', sans-serif;
+    font-size: 30px;
+    margin-right: 30px;
 }
 }
