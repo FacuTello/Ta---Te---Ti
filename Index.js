@@ -3,8 +3,19 @@
 let gameboardCheck = [];
 let isWinner = false;
 let countTurns = 0;
-let playerName1 = prompt("Vamos a jugar al TA-TE-TI ¿Como es tu nombre?");
-let playerName2 = prompt("¿Contra quien vas a jugar?");
+
+let playerName1 = null;
+let playerName2 = null;
+
+while(playerName1 == null || playerName1 == ""){
+    playerName1 = prompt("Vamos a jugar al TA-TE-TI ¿Como es tu nombre?");
+}
+while (playerName2 == null || playerName2 == ""){
+    playerName2 = prompt("¿Contra quien vas a jugar?");
+}
+
+
+
 
 const playerTurn = document.querySelector('.player');
 const gameboard = document.querySelector('.gameboard');
@@ -41,8 +52,6 @@ const changeTurn = ()=>{
         player2.turn = false;
     }
 }
-
-
 
 const checkWinnerRows = (gameboardCheck)=>{
     if (gameboardCheck[0] == "X" && gameboardCheck[1] == "X" && gameboardCheck[2] == "X" ||

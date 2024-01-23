@@ -88,7 +88,7 @@ body,html{
         grid-template-columns: 110px 110px 110px;
         grid-template-rows: 115px 115px 115px;
         margin: auto;
-        font-size: 10px;
+        
 }
     .title-container{
     display: flex;
